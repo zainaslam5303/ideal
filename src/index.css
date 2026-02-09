@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Global styles */
+body {
+@apply bg-white text-gray-800;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #dc2626; /* red-600 */
+}
+
+.swiper-pagination-bullet-active {
+  background: #dc2626;
+}
