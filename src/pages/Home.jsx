@@ -64,7 +64,7 @@ const Home = () => {
         }}
         
         // ✅ RESPONSIVE HEIGHT
-        className="h-[40vh] xs:h-[45vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[80vh]"
+        className="h-[40vh] xs:h-[45vh] sm:h-[50vh] md:h-[60vh] lg:h-[70vh] xl:h-[90vh]"
       >
         
         {/* Mobile Optimization ke liye: */}
@@ -73,7 +73,7 @@ const Home = () => {
             {/* Mobile ke liye optimized image */}
             <source 
               media="(max-width: 640px)" 
-              srcSet="/slides/slide1-mobile.jpg" 
+              srcSet="/slides/slide1-mobile.jpeg" 
             />
             {/* Desktop ke liye original image */}
             <img
@@ -114,7 +114,7 @@ const Home = () => {
             />
             {/* Desktop ke liye original image */}
             <img
-              src="/slides/slide3.jpg"
+              src="/slides/slide3.jpeg"
               className="w-full h-full object-cover"
               alt="Slide 1"
               loading="lazy"
@@ -132,7 +132,7 @@ const Home = () => {
   {/* ADD THIS OVERLAY */}
   <div className="absolute inset-0"></div>
 
-  <div className="relative max-w-7xl mx-auto px-4">
+  <div className="relative max-w-full mx-auto px-4">
 
     <h2 className="text-center text-white text-2xl md:text-3xl font-extrabold mb-10">
       PRODUCTS

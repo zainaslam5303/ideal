@@ -6,14 +6,14 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   const linkClass = ({ isActive }) =>
-  `font-black tracking-wider text-lg transition-all duration-300 ${
+  `font-montserrat font-extrabold tracking-wider text-lg transition-all duration-300 ${
     isActive
       ? "text-red-700"
       : "text-gray-800 hover:text-red-600 hover:scale-105"
   }`;
 
   return (
-    <header className="sticky top-0 z-50 bg-yellow-500 shadow-md">
+    <header className="sticky top-0 z-50 bg-[#ede100] shadow-md">
       <nav className="max-w-7xl mx-auto flex items-center px-4 md:px-8 py-3">
         
         {/* Logo */}
