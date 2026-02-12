@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <!-- Gradients for dynamic feel -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e">
+        <animate attributeName="stop-color" values="#1a1a2e;#16213e;#0f3460;#1a1a2e" dur="10s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#16213e">
+        <animate attributeName="stop-color" values="#16213e;#0f3460;#1a1a2e;#16213e" dur="10s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+    
+    <!-- Brand gradient -->
+    <linearGradient id="idealGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffd700">
+        <animate attributeName="stop-color" values="#ffd700;#ffaa00;#ff6b6b;#ffd700" dur="5s" repeatCount="indefinite" />
+      </stop>
+      <stop offset="100%" stop-color="#ffaa00">
+        <animate attributeName="stop-color" values="#ffaa00;#ff6b6b;#ffd700;#ffaa00" dur="5s" repeatCount="indefinite" />
+      </stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Animated background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  
+  <!-- Floating particles for snack feel -->
+  <g opacity="0.3">
+    <circle cx="100" cy="100" r="2" fill="#ffd700">
+      <animate attributeName="cy" values="100;150;100" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="700" cy="200" r="3" fill="#ff6b6b">
+      <animate attributeName="cy" values="200;250;200" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="200" cy="500" r="2" fill="#4ecdc4">
+      <animate attributeName="cx" values="200;250;200" dur="6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Main IDEAL Brand - Animated -->
+  <text x="400" y="80" font-size="48" font-family="Arial Black, sans-serif" text-anchor="middle" fill="url(#idealGrad)">
+    IDEAL
+    <animate attributeName="opacity" values="1;0.8;1" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="font-size" values="48;52;48" dur="2s" repeatCount="indefinite"/>
+  </text>
+  
+  <!-- TM Symbol -->
+  <text x="550" y="60" font-size="14" fill="#ccc" font-family="Arial">™</text>
+
+  <!-- Product Circles Grid with Animation -->
+  <g transform="translate(0, 50)">
+    
+    <!-- Row 1: Corn Products -->
+    <!-- Crazy Ketchup -->
+    <g transform="translate(150, 180)">
+      <circle cx="0" cy="0" r="60" fill="#ff4757" opacity="0.9">
+        <animate attributeName="r" values="60;65;60" dur="3s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="-30" font-size="12" text-anchor="middle" fill="white">CRAZY</text>
+      <text x="0" y="-15" font-size="14" font-weight="bold" text-anchor="middle" fill="white">KETCHUP</text>
+      <text x="0" y="5" font-size="10" text-anchor="middle" fill="white">100% CORN</text>
+      <text x="0" y="25" font-size="8" text-anchor="middle" fill="white">JUMBO PACK</text>
+      <text x="0" y="40" font-size="8" text-anchor="middle" fill="#ffd700">NEW</text>
+    </g>
+
+    <!-- Corn Puffs -->
+    <g transform="translate(300, 180)">
+      <circle cx="0" cy="0" r="55" fill="#ffaa00" opacity="0.9">
+        <animate attributeName="r" values="55;60;55" dur="2.5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="-20" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Corn Puffs</text>
+      <text x="0" y="5" font-size="10" text-anchor="middle" fill="white">IDEAL®</text>
+    </g>
+
+    <!-- Corn Puffs TM -->
+    <g transform="translate(450, 180)">
+      <circle cx="0" cy="0" r="55" fill="#4ecdc4" opacity="0.9">
+        <animate attributeName="r" values="55;58;55" dur="2.8s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="-20" font-size="16" font-weight="bold" text-anchor="middle" fill="white">CornPuffs</text>
+      <text x="0" y="5" font-size="10" text-anchor="middle" fill="white">IDEAL™</text>
+    </g>
+
+    <!-- Row 2: Chicken & Balls -->
+    <!-- Chicken Tabaka -->
+    <g transform="translate(200, 300)">
+      <circle cx="0" cy="0" r="65" fill="#c44569" opacity="0.9">
+        <animate attributeName="r" values="65;70;65" dur="3.2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="-30" font-size="14" text-anchor="middle" fill="white">Mama</text>
+      <text x="0" y="-15" font-size="16" font-weight="bold" text-anchor="middle" fill="white">chicken Tabaka</text>
+      <text x="0" y="10" font-size="12" text-anchor="middle" fill="white">Rs20</text>
+      <text x="0" y="30" font-size="10" text-anchor="middle" fill="#ffd700">100% BEST</text>
+    </g>
+
+    <!-- Balls Snacks -->
+    <g transform="translate(400, 300)">
+      <circle cx="0" cy="0" r="55" fill="#786fa6" opacity="0.9">
+        <animate attributeName="r" values="55;60;55" dur="2.7s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="-20" font-size="20" font-weight="bold" text-anchor="middle" fill="white">Balls</text>
+      <text x="0" y="5" font-size="14" text-anchor="middle" fill="white">SNACKS</text>
+      <text x="0" y="25" font-size="10" text-anchor="middle" fill="white">IDEAL™</text>
+    </g>
+
+    <!-- Row 3: Masala & Cheezy -->
+    <!-- Masala Masti -->
+    <g transform="translate(250, 440)">
+      <circle cx="0" cy="0" r="70" fill="#e66767" opacity="0.9">
+        <animate attributeName="r" values="70;75;70" dur="3.5s" repeatCount="indefinite"/>
+        <animate attributeName="fill" values="#e66767;#ff6b6b;#e66767" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="-40" font-size="14" text-anchor="middle" fill="white">Rs.10</text>
+      <text x="0" y="-25" font-size="12" text-anchor="middle" fill="white">TIME</text>
+      <text x="0" y="-5" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Corn Puffs</text>
+      <text x="0" y="15" font-size="16" fill="#ffd700" text-anchor="middle" font-weight="bold">Masala</text>
+      <text x="0" y="35" font-size="14" text-anchor="middle" fill="white">Masti</text>
+      <text x="0" y="55" font-size="10" text-anchor="middle" fill="white">Tasty & Crunchy!</text>
+    </g>
+
+    <!-- Cheezy Masti -->
+    <g transform="translate(500, 440)">
+      <circle cx="0" cy="0" r="70" fill="#f19066" opacity="0.9">
+        <animate attributeName="r" values="70;74;70" dur="3.8s" repeatCount="indefinite"/>
+        <animate attributeName="fill" values="#f19066;#e15f41;#f19066" dur="4s" repeatCount="indefinite"/>
+      </circle>
+      <text x="0" y="-40" font-size="14" text-anchor="middle" fill="white">Rs.10</text>
+      <text x="0" y="-25" font-size="12" text-anchor="middle" fill="white">TIME</text>
+      <text x="0" y="-5" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Corn Puffs</text>
+      <text x="0" y="15" font-size="16" fill="#ffd700" text-anchor="middle" font-weight="bold">Cheezy</text>
+      <text x="0" y="35" font-size="14" text-anchor="middle" fill="white">Masti</text>
+      <text x="0" y="55" font-size="10" text-anchor="middle" fill="white">Tasty & Crunchy!</text>
+    </g>
+
+  </g>
+
+  <!-- Animated taglines -->
+  <g transform="translate(400, 550)">
+    <text x="0" y="0" font-size="18" text-anchor="middle" fill="#ffd700" font-family="Arial">
+      Quality Never Compromises!
+      <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
+    </text>
+    <text x="0" y="25" font-size="14" text-anchor="middle" fill="#fff" font-family="Arial">
+      Mazay Ka Sixep
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Decorative elements -->
+  <circle cx="50" cy="50" r="8" fill="#ffd700" opacity="0.3">
+    <animate attributeName="r" values="8;15;8" dur="4s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="750" cy="550" r="12" fill="#ff6b6b" opacity="0.3">
+    <animate attributeName="r" values="12;20;12" dur="5s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Life Time text animation -->
+  <text x="650" y="120" font-size="12" fill="#4ecdc4" font-family="Arial">
+    LIFE TIME
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </text>
+</svg>

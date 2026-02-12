@@ -1,10 +1,13 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import DistributorHero from "../components/DistributorHero";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import ContactUs from "../components/ContactUs";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -92,11 +95,11 @@ const Home = () => {
             {/* Mobile ke liye optimized image */}
             <source 
               media="(max-width: 640px)" 
-              srcSet="/slides/slide2-mobile1.jpg" 
+              srcSet="/slides/slide4-mobile.jpeg" 
             />
             {/* Desktop ke liye original image */}
             <img
-              src="/slides/slide2.jpg"
+              src="/slides/slide4.jpeg"
               className="w-full h-full object-cover"
               alt="Slide 1"
               loading="lazy"
@@ -110,11 +113,11 @@ const Home = () => {
             {/* Mobile ke liye optimized image */}
             <source 
               media="(max-width: 640px)" 
-              srcSet="/slides/slide3-mobile.jpg" 
+              srcSet="/slides/slide5-mobile.jpeg" 
             />
             {/* Desktop ke liye original image */}
             <img
-              src="/slides/slide3.jpeg"
+              src="/slides/slide5.jpeg"
               className="w-full h-full object-cover"
               alt="Slide 1"
               loading="lazy"
@@ -123,12 +126,15 @@ const Home = () => {
         </SwiperSlide>
 
       </Swiper>
+      <DistributorHero />
     </div>
     {/* PRODUCTS CAROUSEL */}
-<section className="relative bg-fixed bg-center bg-cover py-16"
-  style={{
-    backgroundImage: "url('/background.jpg')",
-  }}>
+    <section
+      className="relative py-16"
+      style={{
+        background: "radial-gradient(circle at center, #ff1a1a 0%, #cc0000 40%, #990000 70%, #7a0000 100%)"
+      }}
+    >
   {/* ADD THIS OVERLAY */}
   <div className="absolute inset-0"></div>
 
@@ -171,6 +177,7 @@ const Home = () => {
         "/products/product8.png",
         "/products/product9.png",
         "/products/product10.png",
+        "/products/product11-1.png",
       ].map((img, index) => (
         <SwiperSlide key={index}>
           {({ isActive }) => (
@@ -194,6 +201,8 @@ const Home = () => {
     </Swiper>
   </div>
 </section>
+<ContactUs />
+<Footer />
     </>
   );
 };
