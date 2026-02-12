@@ -75,7 +75,7 @@ const Footer = () => {
               <ul className="space-y-4">
                 {["Home", "Products", "About Us", "Become Distributor", "Contact"].map((item) => (
                   <li key={item}>
-                    <a href="#" className="text-gray-400 hover:text-[#EDE100] transition-colors duration-300 flex items-center group">
+                    <a href="#contact-section" className="text-gray-400 hover:text-[#EDE100] transition-colors duration-300 flex items-center group">
                       <span className="w-0 group-hover:w-2 h-0.5 bg-[#EDE100] mr-0 group-hover:mr-2 transition-all duration-300"></span>
                       {item}
                     </a>

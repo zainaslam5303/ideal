@@ -1,40 +1,29 @@
-import { useState, useEffect } from "react";  // ✅ useEffect import karo
+import { useState, useEffect } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
-  const [showNavbar, setShowNavbar] = useState(true);  // ✅ 1. State for navbar visibility
-  const [lastScrollY, setLastScrollY] = useState(0);    // ✅ 2. Track last scroll position
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
-  // ✅ 3. Scroll effect handler
+  // Scroll effect handler
   useEffect(() => {
     const controlNavbar = () => {
       const currentScrollY = window.scrollY;
       
-      // Agar bilkul top pe hain to hamesha show karo
-      if (currentScrollY < 20) {
+      if (currentScrollY < lastScrollY) {
         setShowNavbar(true);
-      }
-      // Scroll down
-      else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+      } else if (currentScrollY > lastScrollY && currentScrollY > 80) {
         setShowNavbar(false);
         setOpen(false);
-      }
-      // Scroll up
-      else if (currentScrollY < lastScrollY) {
-        setShowNavbar(true);
       }
       
       setLastScrollY(currentScrollY);
     };
 
     window.addEventListener('scroll', controlNavbar);
-    
-    // Cleanup
-    return () => {
-      window.removeEventListener('scroll', controlNavbar);
-    };
+    return () => window.removeEventListener('scroll', controlNavbar);
   }, [lastScrollY]);
 
   const linkClass = ({ isActive }) =>
@@ -44,13 +33,42 @@ const Navbar = () => {
         : "text-gray-800 hover:text-red-600 hover:scale-105"
     }`;
 
+  // ✅ SIMPLE FIX: Menu button click handler
+  const handleMenuClick = () => {
+    const currentScrollY = window.scrollY;
+    
+    // AGAR TOP PE HAI - DIRECT OPEN
+    if (currentScrollY === 0) {
+      setOpen(!open);
+      setShowNavbar(true);
+      return;
+    }
+    
+    // Scroll to top
+    window.scrollTo({
+      top: 0,
+      behavior: 'auto',
+    });
+    
+    // DELAY CALCULATE - JITNA NEE CHE, UTNA ZYADA DELAY
+    let delay = 0;
+    if (currentScrollY < 100) delay = 400;
+    else if (currentScrollY < 500) delay = 400;
+    else if (currentScrollY < 1000) delay = 400;
+    else delay = 1000; // 1 second for very far
+    
+    setTimeout(() => {
+      setOpen(!open);
+      setShowNavbar(true);
+    }, delay);
+  };
+
   return (
     <header 
       className={`sticky top-0 z-50 bg-[#ede100] shadow-md transition-transform duration-500 ${
         showNavbar ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      {/* Rest of your navbar code remains exactly the same */}
       <nav className="max-w-7xl mx-auto flex items-center px-4 md:px-8 py-3">
         
         {/* Logo */}
@@ -78,10 +96,10 @@ const Navbar = () => {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - NEW HANDLER */}
         <button
           className="ml-auto md:hidden text-2xl font-bold"
-          onClick={() => setOpen(!open)}
+          onClick={handleMenuClick}
         >
           ☰
         </button>

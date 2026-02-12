@@ -44,7 +44,7 @@ const DistributorHero = () => {
                 </p>
                 
                 <a 
-                  href="/become-a-distributor"
+                  href="/#contact-section"
                   className="inline-flex items-center justify-center px-6 py-3 md:px-6 md:py-3 bg-black hover:bg-gray-900 text-white font-semibold rounded-full transition-all duration-300 text-sm md:text-base w-full sm:w-auto"
                 >
                   Connect With Us
