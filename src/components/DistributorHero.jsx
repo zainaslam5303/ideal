@@ -8,7 +8,7 @@ const DistributorHero = () => {
         <div className="hero__media absolute inset-0 w-full h-full">
           <div className="h-full w-full bg-gradient-to-br from-[#ffea66] via-[#ffd600] to-[#f3b700]">
             <div className="absolute inset-0 bg-black/10" />
-            <div className="mx-auto flex h-full w-full max-w-7xl items-center justify-center gap-4 px-4 sm:gap-6 md:justify-end md:gap-10 md:px-8 lg:px-12">
+            <div className="mx-auto flex h-full w-full max-w-7xl pt-5 lg:items-center justify-center gap-4 px-4 sm:gap-6 md:justify-end md:gap-10 md:px-8 lg:px-12">
               <img
                 src="/products/product1.png"
                 alt="Product 1"
