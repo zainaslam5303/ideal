@@ -1,40 +1,34 @@
-import { Player } from "@lottiefiles/react-lottie-player";
-
 const DistributorHero = () => {
   return (
     <div className="relative w-full bg-white">
       {/* Main Container */}
       <div className="hero relative w-full min-h-[500px] md:min-h-[600px] lg:min-h-[700px] overflow-hidden">
         
-        {/* Lottie Animation Background */}
+        {/* Animated product visuals */}
         <div className="hero__media absolute inset-0 w-full h-full">
-          {/* Desktop Version */}
-          <Player
-            autoplay
-            loop
-            src="https://cdn.shopify.com/s/files/1/0917/0347/6515/files/Become_a_distributor_New_7f42ec91-a7bc-42f9-9b3f-15468a8ccffc.json?v=1749547736"
-            className="hidden md:block w-full h-full object-cover"
-            background="transparent"
-            style={{ width: '100%', height: '100%' }}
-          />
-          
-          {/* Mobile Version */}
-          <Player
-            autoplay
-            loop
-            src="https://cdn.shopify.com/s/files/1/0917/0347/6515/files/Become_a_distributor_Mobile-13_June.json?v=1750050460"
-            className="block md:hidden w-full h-full object-cover"
-            background="transparent"
-            style={{ width: '100%', height: '100%' }}
-          />
+          <div className="h-full w-full bg-gradient-to-br from-[#ffea66] via-[#ffd600] to-[#f3b700]">
+            <div className="absolute inset-0 bg-black/10" />
+            <div className="mx-auto flex h-full w-full max-w-7xl items-center justify-center gap-4 px-4 sm:gap-6 md:justify-end md:gap-10 md:px-8 lg:px-12">
+              <img
+                src="/products/product1.png"
+                alt="Product 1"
+                className="h-40 w-auto sm:h-48 md:h-64 lg:h-80 animate-[floatUp_3.6s_ease-in-out_infinite]"
+              />
+              <img
+                src="/products/product2.png"
+                alt="Product 2"
+                className="h-40 w-auto sm:h-48 md:h-64 lg:h-80 animate-[floatDown_3.6s_ease-in-out_infinite]"
+              />
+            </div>
+          </div>
         </div>
 
         {/* Content Overlay - Mobile Optimized */}
         <div className="hero__text absolute inset-0 flex items-end md:items-center pb-10 md:pb-0">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="max-w-2xl mx-auto md:mx-0">
+            <div className="max-w-xl mx-auto md:mx-0">
               {/* Yellow Background Container - Mobile Friendly */}
-              <div className="md:bg-[#FFD600] p-2 mb-60 md:mb-0 sm:p-8 md:p-10 lg:p-12 rounded-lg md:rounded-lg md:shadow-2xl w-full md:w-auto md:inline-block">
+              <div className="bg-[#FFD600]/95 p-4 mb-6 sm:mb-10 md:mb-0 sm:p-7 md:p-9 lg:p-10 rounded-xl shadow-2xl w-full md:w-auto md:inline-block">
                 <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-black mb-3 md:mb-4 leading-tight">
                   Become our distributor
                 </h2>
@@ -57,6 +51,16 @@ const DistributorHero = () => {
           </div>
         </div>
       </div>
+      <style>{`
+        @keyframes floatUp {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-14px); }
+        }
+        @keyframes floatDown {
+          0%, 100% { transform: translateY(-10px); }
+          50% { transform: translateY(8px); }
+        }
+      `}</style>
     </div>
   );
 };
